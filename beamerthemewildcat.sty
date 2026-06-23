@@ -44,12 +44,11 @@
 %   number   — slide number only
 %   progressbar — bottom progress bar showing i/N
 %   none     — no slide numbering
-\DeclareOptionBeamer{color}{\def\wc@coloropt{#1}}
 \DeclareOptionBeamer{sectionpage}{\def\wc@sectionpage{#1}}
 \DeclareOptionBeamer{agendastyle}{\def\wc@agendastyle{#1}}
 \DeclareOptionBeamer{breadcrumb}{\def\wc@breadcrumb{#1}}
 \DeclareOptionBeamer{numbering}{\def\wc@numbering{#1}}
-\ExecuteOptionsBeamer{color=,sectionpage=on,agendastyle=plain,breadcrumb=none,numbering=fraction}
+\ExecuteOptionsBeamer{sectionpage=on,agendastyle=plain,breadcrumb=none,numbering=fraction}
 \ProcessOptionsBeamer
 
 % Settings
@@ -72,20 +71,20 @@
 % Darker variants:  wcprimary1N0 = wcprimary!(100-N*10)!black  (N = 1,2,3,4)
 %   e.g. wcprimary110 = wcprimary!90!black  (10% black mixed in)
 %        wcprimary140 = wcprimary!60!black  (40% black mixed in)
-\ifx\wc@coloropt\@empty\else
-  \def\wc@applyprimarycolor#1{%
-    \colorlet{wcprimary}{#1}%
-    \colorlet{wcprimary10}{wcprimary!10!white}%
-    \colorlet{wcprimary20}{wcprimary!20!white}%
-    \colorlet{wcprimary30}{wcprimary!30!white}%
-    \colorlet{wcprimary40}{wcprimary!40!white}%
-    \colorlet{wcprimary110}{wcprimary!90!black}%
-    \colorlet{wcprimary120}{wcprimary!80!black}%
-    \colorlet{wcprimary130}{wcprimary!70!black}%
-    \colorlet{wcprimary140}{wcprimary!60!black}%
-  }%
-  \expandafter\wc@applyprimarycolor\expandafter{\wc@coloropt}%
-\fi
+% \ifx\wc@coloropt\@empty\else
+%   \def\wc@applyprimarycolor#1{%
+%     \colorlet{wcprimary}{#1}%
+%     \colorlet{wcprimary10}{wcprimary!10!white}%
+%     \colorlet{wcprimary20}{wcprimary!20!white}%
+%     \colorlet{wcprimary30}{wcprimary!30!white}%
+%     \colorlet{wcprimary40}{wcprimary!40!white}%
+%     \colorlet{wcprimary110}{wcprimary!90!black}%
+%     \colorlet{wcprimary120}{wcprimary!80!black}%
+%     \colorlet{wcprimary130}{wcprimary!70!black}%
+%     \colorlet{wcprimary140}{wcprimary!60!black}%
+%   }%
+%   \expandafter\wc@applyprimarycolor\expandafter{\wc@coloropt}%
+% \fi
 
 % Apply the pattern option immediately after the inner theme has defined all
 % commands. This must NOT be deferred to \AtBeginDocument — the inner theme
