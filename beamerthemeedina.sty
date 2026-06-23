@@ -18,10 +18,11 @@
 %   number   — slide number only
 %   progressbar — bottom progress bar showing i/N
 %   none     — no slide numbering
+\DeclareOptionBeamer{navigation}{\def\ed@navigation{#1}}
 \DeclareOptionBeamer{sectionpage}{\def\ed@sectionpage{#1}}
 \DeclareOptionBeamer{agendastyle}{\def\ed@agendastyle{#1}}
 \DeclareOptionBeamer{numbering}{\def\ed@numbering{#1}}
-\ExecuteOptionsBeamer{sectionpage=off,agendastyle=pattern,numbering=progressbar}
+\ExecuteOptionsBeamer{navigation=on,sectionpage=on,agendastyle=pattern,numbering=progressbar}
 \ProcessOptionsBeamer
 
 \useinnertheme{edina}
