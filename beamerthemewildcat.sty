@@ -44,13 +44,12 @@
 %   number   — slide number only
 %   progressbar — bottom progress bar showing i/N
 %   none     — no slide numbering
-\DeclareOptionBeamer{pattern}{\def\wc@pattern{#1}}
 \DeclareOptionBeamer{color}{\def\wc@coloropt{#1}}
 \DeclareOptionBeamer{sectionpage}{\def\wc@sectionpage{#1}}
 \DeclareOptionBeamer{agendastyle}{\def\wc@agendastyle{#1}}
 \DeclareOptionBeamer{breadcrumb}{\def\wc@breadcrumb{#1}}
 \DeclareOptionBeamer{numbering}{\def\wc@numbering{#1}}
-\ExecuteOptionsBeamer{pattern=facet,color=,sectionpage=on,agendastyle=plain,breadcrumb=none,numbering=fraction}
+\ExecuteOptionsBeamer{color=,sectionpage=on,agendastyle=plain,breadcrumb=none,numbering=fraction}
 \ProcessOptionsBeamer
 
 % Settings
@@ -95,54 +94,54 @@
 %
 % \bgpatternfacet is the only pattern with no color argument; all others
 % take wcprimary for \bgpattern and a color argument for \bgpatternblock.
-\def\wc@tmp{facet}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternfacet}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternblockfacet{#1}}%
-\fi
-\def\wc@tmp{facetrand}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternfacetrand{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternfacetrand{#1}}%
-\fi
-\def\wc@tmp{triangle}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatterntriangle{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatterntriangle{#1}}%
-\fi
-\def\wc@tmp{triangleiso}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatterntriangleiso{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatterntriangleiso{#1}}%
-\fi
-\def\wc@tmp{trianglemesh}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatterntrianglemesh{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatterntrianglemesh{#1}}%
-\fi
-\def\wc@tmp{squares}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternsquares{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternsquares{#1}}%
-\fi
-\def\wc@tmp{circles}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatterncircles{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatterncircles{#1}}%
-\fi
-\def\wc@tmp{hexraise}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternhexraise{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternhexraise{#1}}%
-\fi
-\def\wc@tmp{hexrand}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternhexrand{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternhexrand{#1}}%
-\fi
-\def\wc@tmp{network}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternnetwork{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternnetwork{#1}}%
-\fi
-\def\wc@tmp{quilt}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternquilt{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternquilt{#1}}%
-\fi
-\def\wc@tmp{plain}\ifx\wc@pattern\wc@tmp
-  \renewcommand{\bgpattern}{\bgpatternplain{wcprimary}}%
-  \renewcommand{\bgpatternblock}[1]{\bgpatternplain{#1}}%
-\fi
+% \def\wc@tmp{facet}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternfacet}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternblockfacet{#1}}%
+% \fi
+% \def\wc@tmp{facetrand}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternfacetrand{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternfacetrand{#1}}%
+% \fi
+% \def\wc@tmp{triangle}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatterntriangle{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatterntriangle{#1}}%
+% \fi
+% \def\wc@tmp{triangleiso}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatterntriangleiso{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatterntriangleiso{#1}}%
+% \fi
+% \def\wc@tmp{trianglemesh}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatterntrianglemesh{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatterntrianglemesh{#1}}%
+% \fi
+% \def\wc@tmp{squares}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternsquares{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternsquares{#1}}%
+% \fi
+% \def\wc@tmp{circles}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatterncircles{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatterncircles{#1}}%
+% \fi
+% \def\wc@tmp{hexraise}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternhexraise{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternhexraise{#1}}%
+% \fi
+% \def\wc@tmp{hexrand}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternhexrand{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternhexrand{#1}}%
+% \fi
+% \def\wc@tmp{network}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternnetwork{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternnetwork{#1}}%
+% \fi
+% \def\wc@tmp{quilt}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternquilt{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternquilt{#1}}%
+% \fi
+% \def\wc@tmp{plain}\ifx\wc@pattern\wc@tmp
+%   \renewcommand{\bgpattern}{\bgpatternplain{wcprimary}}%
+%   \renewcommand{\bgpatternblock}[1]{\bgpatternplain{#1}}%
+% \fi
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{blocks}[shadow=false]
