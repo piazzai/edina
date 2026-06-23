@@ -4,13 +4,8 @@
 
 \makeatletter
 
-% Ensure hyperref package is included
 \usepackage{hyperref}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Set the frame title and footer
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Frame title
 \defbeamertemplate*{frametitle}{edina}[1][]
 {
   \nointerlineskip%
@@ -24,18 +19,14 @@
   \end{beamercolorbox}%
 }
 
-% % Header (Navigation) - Uncomment if you want navigation symbols
-% \setbeamertemplate{headline}{
-%   % If page > 1 (don't diplsy for first page)
-%   \ifnum\thepage>1
-%     \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}
-%       \insertnavigation{\paperwidth} % Add navigation symbols
-%     \end{beamercolorbox}
-%   \fi
-% }
+\setbeamertemplate{headline}{
+  \ifnum\thepage>1
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}
+      \insertnavigation{\paperwidth}
+    \end{beamercolorbox}
+  \fi
+}
 
-% Footer (Pages)
-%% NOTE: ON OVERLEAF USE ht=-2.5ex. Not sure why this is needed.
 \setbeamertemplate{footline}{
   \ifbeamer@inappendix\else
     \ifnum\insertframenumber>1
@@ -43,12 +34,12 @@
         \def\ed@tmp{progressbar}\ifx\ed@numbering\ed@tmp
           \ifnum\insertmainframenumber>1
             \begingroup
-              \dimen@=\paperwidth
-              \multiply\dimen@ by \numexpr\insertframenumber-1\relax
-              \divide\dimen@ by \numexpr\insertmainframenumber-1\relax
-              \leavevmode
-              \rlap{\color{edprimary!10}\rule{\paperwidth}{1.8pt}}%
-              {\color{edprimary}\rule{\dimen@}{1.8pt}}%
+            \dimen@=\paperwidth
+            \multiply\dimen@ by \numexpr\insertframenumber-1\relax
+            \divide\dimen@ by \numexpr\insertmainframenumber-1\relax
+            \leavevmode
+            \rlap{\color{edprimary!10}\rule{\paperwidth}{1.8pt}}%
+            {\color{edprimary}\rule{\dimen@}{1.8pt}}%
             \endgroup
           \fi
         \else
