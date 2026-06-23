@@ -440,14 +440,15 @@
 % \newcommand{\bgpattern}{\bgpatterntriangle{wcprimary}}
 % \newcommand{\bgpatternblock}[1]{\bgpatterntriangle{#1}}
 
-\newcommand{\bgpatternsandbox}[1]{%
+\newcommand{\bgpatternlogo}[1]{%
   \fill[#1!90!black] (current page.south west) rectangle (current page.north east);
-  \fill[#1,opacity=1.0]
-  (current page.north west) circle [radius=0.8*\paperwidth];
+  \coordinate (center) at ($(current page.north west)+(2,-1)$);
+  \fill[#1,opacity=1] (center) circle [radius=0.8\paperwidth];
+  \node[opacity=.1,rotate=-5] at (center) {\includegraphics[width=1.55\paperwidth]{logo/roundel.pdf}};
 }
 
-\newcommand{\bgpattern}{\bgpatternsandbox{wcprimary}}
-\newcommand{\bgpatternblock}[1]{\bgpatternsandbox{#1}}
+\newcommand{\bgpattern}{\bgpatternlogo{wcprimary}}
+\newcommand{\bgpatternblock}[1]{\bgpatternlogo{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PATTERN CACHE
