@@ -5,26 +5,33 @@
 \setbeamercolor*{date}{fg=white}
 \setbeamercolor{background canvas}{bg=white}
 
-\definecolor{edprimary}{RGB}{078, 042, 132}
-\definecolor{edprimary140}{RGB}{048, 016, 078}
-\definecolor{edprimary130}{RGB}{056, 023, 090}
-\definecolor{edprimary120}{RGB}{064, 031, 104}
-\definecolor{edprimary110}{RGB}{072, 036, 118}
-\definecolor{edprimary40}{RGB}{164, 149, 195}
-\definecolor{edprimary30}{RGB}{182, 172, 209}
-\definecolor{edprimary20}{RGB}{204, 196, 223}
-\definecolor{edprimary10}{RGB}{228, 224, 238}
+% core colors
+\definecolor{eduniversityred}{HTML}{D50032}
+\definecolor{eduniversityblue}{HTML}{041E42}
 
-\definecolor{edalerted}{RGB}{202, 124, 027}
-\definecolor{edexample}{RGB}{000, 134, 086}
+% digital palette
+\definecolor{edbrightblue}{HTML}{007288}
+\definecolor{edbrightpink}{HTML}{D0006F}
+\definecolor{edpurple}{HTML}{830065}
+\definecolor{edburgundy}{HTML}{A50034}
+\definecolor{eddarkgreen}{HTML}{154734}
+\definecolor{edjade}{HTML}{487A7B}
+\definecolor{edmutedblue}{HTML}{004F71}
+\definecolor{edmutedbrown}{HTML}{6D4F47}
+\definecolor{edsprucegrey}{HTML}{333F48}
 
-\definecolor{edprimary160}{RGB}{029, 002, 053}
-\definecolor{edprimary150}{RGB}{038, 008, 065}
-\definecolor{edprimary90}{RGB}{91, 59, 140}
-\definecolor{edprimary80}{RGB}{104, 076, 150}
-\definecolor{edprimary70}{RGB}{118, 093, 160}
-\definecolor{edprimary60}{RGB}{131, 110, 170}
-\definecolor{edprimary50}{RGB}{147, 128, 182}
+\colorlet{edprimary}{eduniversityblue}
+\colorlet{edprimary10}{edprimary!10}
+\colorlet{edprimary20}{edprimary!20}
+\colorlet{edprimary30}{edprimary!30}
+\colorlet{edprimary40}{edprimary!40}
+\colorlet{edprimary110}{edprimary!110}
+\colorlet{edprimary120}{edprimary!120}
+\colorlet{edprimary130}{edprimary!130}
+\colorlet{edprimary140}{edprimary!140}
+
+\colorlet{edalerted}{eduniversityred}
+\colorlet{edexample}{eddarkgreen}
 
 \setlist[enumerate]{label={\ifnum\@itemdepth=1\relax
         \color{edalerted}\else
