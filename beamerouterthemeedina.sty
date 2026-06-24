@@ -19,16 +19,6 @@
   \end{beamercolorbox}%
 }
 
-\setbeamertemplate{headline}{
-  \ifnum\thepage>1
-    \def\ed@tmp{none}\ifx\ed@navigation\ed@tmp\else
-      \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}
-        \insertnavigation{\paperwidth}
-      \end{beamercolorbox}
-    \fi
-  \fi
-}
-
 \setbeamertemplate{footline}{
   \ifbeamer@inappendix\else
     \ifnum\insertframenumber>1
