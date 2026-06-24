@@ -1,21 +1,7 @@
 \mode<presentation>
 
-\providecommand{\ed@pattern}{facet}
-\providecommand{\ed@agendastyle}{plain}
 \providecommand{\ed@sectionpage}{none}
 \providecommand{\ed@appendixsectionthreshold}{9999}
-\newif\ifed@plainpattern
-\def\ed@tmp{plain}\ifx\ed@pattern\ed@tmp
-  \ed@plainpatterntrue
-\else
-  \ed@plainpatternfalse
-\fi
-\newif\ifed@agendapattern
-\def\ed@tmp{pattern}\ifx\ed@agendastyle\ed@tmp
-  \ed@agendapatterntrue
-\else
-  \ed@agendapatternfalse
-\fi
 
 \newcommand{\bgpatternlogo}[1]{%
   \fill[#1!90!black] (current page.south west) rectangle (current page.north east);
@@ -235,7 +221,6 @@
 }
 
 \newcommand{\ed@agendalayout}[1]{%
-  \ifed@agendapattern
     \begin{tikzpicture}[remember picture,overlay]
       \begin{scope}[shift={(current page.south west)}]
         \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
@@ -243,7 +228,6 @@
         \node[anchor=south west,inner sep=0] at (9.625,0) {\usebox{\ed@bgpatternbox}};
       \end{scope}
     \end{tikzpicture}%
-  \fi
   \vspace{1em}%
   \noindent\begin{minipage}{0.6\textwidth}
     \begingroup

@@ -12,17 +12,14 @@
 
 % [sectionpage=<on|none>] — section divider pages. Default: on
 %
-% [agendastyle=<plain|pattern>] — agenda/section page background. Default: plain
-%
 % [numbering=<fraction|number|progressbar|none>] — slide numbering style. Default: fraction
 %   fraction — i/N  (slide i of N, excluding title page)
 %   number   — slide number only
 %   progressbar — bottom progress bar showing i/N
 %   none     — no slide numbering
 \DeclareOptionBeamer{sectionpage}{\def\ed@sectionpage{#1}}
-\DeclareOptionBeamer{agendastyle}{\def\ed@agendastyle{#1}}
 \DeclareOptionBeamer{numbering}{\def\ed@numbering{#1}}
-\ExecuteOptionsBeamer{sectionpage=on,agendastyle=pattern,numbering=progressbar}
+\ExecuteOptionsBeamer{sectionpage=on,numbering=progressbar}
 \ProcessOptionsBeamer
 
 \useinnertheme{edina}
